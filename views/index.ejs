@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Website</title>
+  <style>
+
+    body {
+      background: linear-gradient(to bottom, #ff0000, #4000ff);
+      background-size: 100% 100vh;
+      background-repeat: no-repeat;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .logout-button {
+      display: inline-block;
+      background-color: #f44336;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to My Website</h1>
+    <!-- Your website content here -->
+
+    <form action="/logout" method="post">
+      <button type="submit" class="logout-button">Logout</button>
+    </form>
+  </div>
+</body>
+</html>

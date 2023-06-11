@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #4000ff, #ff0000);
+      background-size: 100% 100vh;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    
+    .register-container {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .register-container h1 {
+      text-align: center;
+    }
+
+    .register-container form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 400px;
+    }
+
+    .register-container label {
+      margin-top: 10px;
+    }
+
+    .register-container input {
+      margin-top: 5px;
+      padding: 5px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+    }
+
+    .register-container button {
+      margin-top: 10px;
+      padding: 5px 10px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+    .register-button {
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="register-container">
+    <h1>Register</h1>
+    <form method="POST" action="/register">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <br>
+      <button type="submit">Register</button>
+    </form>
+    <div class="register-button">
+      <button onclick="redirectToRegister()">login</button>
+    </div>
+    <div class="register-button">
+      <a href="#" onclick="redirectToGoogleLogin()">
+        <img src="https://th.bing.com/th/id/OIP.pZ6bfFCJw4r8KiSEhPXdsQAAAA?pid=ImgDet&rs=1" alt="Login with Google" width="100">
+      </a>
+      
+    </div>
+    
+
+  </div>
+  <script>
+    function login() {
+      // Perform any client-side validation or processing if needed
+      // For example, you can validate the email format or check for empty fields
+      // Then submit the form
+      document.querySelector('form').submit();
+    }
+    function redirectToRegister() {
+      // Redirect to the register page
+      window.location.href = "/login";
+    }
+    function redirectToGoogleLogin() {
+  // Redirect to the Google authentication route
+  window.location.href = "/auth/google";
+}
+
+  </script>
+</body>
+</html>
